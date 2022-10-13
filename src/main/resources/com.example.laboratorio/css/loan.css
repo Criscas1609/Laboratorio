@@ -1,0 +1,10 @@
+.tabla{
+
+    -fx-background-image: url("photos/Presentación1.png");
+    -fx-background-size: 600px 350px;
+    -fx-background-position: 45% 45%;
+    -fx-background-repeat: no-repeat;
+
+
+
+}

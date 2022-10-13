@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laboratorio.controller.PersonViewController">
+  <tabs>
+    <Tab style="-fx-background-color: #FF8F8F;" text="Personas">
+      <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Accordion layoutX="14.0" layoutY="14.0" prefHeight="471.2" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <panes>
+                      <TitledPane animated="false" pickOnBounds="false" style="-fx-background-color: #5A7AFF;" text="Estudiantes">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #5AA8F;">
+                                 <children>
+                                    <SplitPane dividerPositions="0.5016920473773266" layoutX="14.0" layoutY="14.0" orientation="VERTICAL" prefHeight="393.6" prefWidth="798.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                             <children>
+                                                <GridPane layoutX="20.0" layoutY="14.0" prefHeight="185.6" prefWidth="778.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                                         <children>
+                                                            <Label text="Nombre" />
+                                                            <TextField id="nombreEstudiante" fx:id="nombreEstudiante" prefHeight="26.0" prefWidth="526.0" promptText="Ingrese el nombre del estudiante" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="1">
+                                                         <children>
+                                                            <Label text="Carrera" />
+                                                            <ChoiceBox fx:id="carreraEstudiante" prefHeight="26.0" prefWidth="238.0" />
+                                                            <Label text="Semestre" />
+                                                            <ChoiceBox id="semestreEstudiante" fx:id="semestreEstudiante" prefHeight="26.0" prefWidth="258.0" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="2">
+                                                         <children>
+                                                            <Label text="Id" />
+                                                            <TextField id="idEstudiante" fx:id="idEstudiante" prefHeight="26.0" prefWidth="534.0" promptText="Ingrese el id del estudiante" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                             <children>
+                                                <TableView fx:id="tablePersonEs" layoutX="130.0" layoutY="16.0" prefHeight="165.0" prefWidth="877.0" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="nameEs" prefWidth="337.599957883358" text="Nombre" />
+                                                    <TableColumn fx:id="careerEs" minWidth="0.0" prefWidth="252.800048828125" text="Carrera" />
+                                                      <TableColumn fx:id="SemEs" minWidth="0.0" prefWidth="84.79998779296875" text="Semestre" />
+                                                      <TableColumn fx:id="idEs" minWidth="0.0" prefWidth="202.4000244140625" text="Id" />
+                                                  </columns>
+                                                </TableView>
+                                                <Button id="botonCrearE" layoutX="76.0" layoutY="183.0" mnemonicParsing="false" onAction="#botonCrearE" prefHeight="40.0" prefWidth="100.0" text="Crear" />
+                                                <Button id="botonEditarE" layoutX="291.0" layoutY="183.0" mnemonicParsing="false" onAction="#botonEditarE" prefHeight="40.0" prefWidth="100.0" text="Editar" />
+                                                <Button id="botonEliminarE" layoutX="734.0" layoutY="183.0" mnemonicParsing="false" onAction="#botonEliminarE" prefHeight="40.0" prefWidth="100.0" text="Eliminar" />
+                                                <Button id="botonBuscarE" layoutX="541.0" layoutY="183.0" mnemonicParsing="false" onAction="#botonBuscarE" prefHeight="40.0" prefWidth="100.0" text="Buscar" />
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" style="-fx-background-color: #71ABFF;" text="Monitor">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="393.6" prefWidth="798.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.5080372250423012" layoutX="14.0" layoutY="14.0" orientation="VERTICAL" prefHeight="393.6" prefWidth="798.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <GridPane layoutX="20.0" layoutY="14.0" prefHeight="185.6" prefWidth="778.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                                               <children>
+                                                                  <Label text="Nombre" />
+                                                                  <TextField id="nombreMonitor" fx:id="nombreMonitor" prefHeight="26.0" prefWidth="526.0" promptText="Ingrese el nombre del monitor" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="3">
+                                                               <padding>
+                                                                  <Insets left="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="1">
+                                                               <children>
+                                                                  <Label text="Carrera" />
+                                                                  <ChoiceBox id="carreraMonitor" fx:id="carreraMonitor" prefHeight="26.0" prefWidth="218.0" />
+                                                                  <Label text="Semestre" />
+                                                                  <ChoiceBox id="semestreMonitor" fx:id="semestreMonitor" onDragDetected="#semestreMonitor" prefHeight="26.0" prefWidth="213.0" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="2">
+                                                               <children>
+                                                                  <Label text="Codigo" />
+                                                                  <TextField id="codigoMonitor" fx:id="codigoMonitor" prefHeight="26.0" prefWidth="534.0" promptText="Ingrese el codigo del monitor" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <TableView fx:id="tableMonitor" prefHeight="165.0" prefWidth="877.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="nameMo" prefWidth="337.599957883358" text="Nombre" />
+                                                            <TableColumn fx:id="careerMo" minWidth="0.0" prefWidth="252.800048828125" text="Carrera" />
+                                                            <TableColumn fx:id="semMo" minWidth="0.0" prefWidth="84.79998779296875" text="Semestre" />
+                                                            <TableColumn fx:id="idMo" minWidth="0.0" prefWidth="202.4000244140625" text="Id" />
+                                                         </columns>
+                                                      </TableView>
+                                                      <Button layoutX="705.0" layoutY="176.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Crear" />
+                                                      <Button layoutX="705.0" layoutY="176.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Editar" />
+                                                      <Button id="eliminarMonitor" layoutX="705.0" layoutY="176.0" mnemonicParsing="false" onAction="#eliminarMonitor" prefHeight="40.0" prefWidth="100.0" text="Eliminar" />
+                                                      <Button id="editarMonitor" layoutX="281.0" layoutY="176.0" mnemonicParsing="false" onAction="#editarMonitor" prefHeight="40.0" prefWidth="100.0" text="Editar" />
+                                                      <Button id="crearMonitor" layoutX="82.0" layoutY="176.0" mnemonicParsing="false" onAction="#crearMonitor" prefHeight="40.0" prefWidth="100.0" text="Crear" />
+                                                      <Button id="buscarMonitor" layoutX="502.0" layoutY="176.0" mnemonicParsing="false" onAction="#buscarMonitor" prefHeight="40.0" prefWidth="100.0" text="Buscar" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" text="Funcionario">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Accordion prefHeight="393.6" prefWidth="798.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <panes>
+                                        <TitledPane animated="false" text="Profesor">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="322.4" prefWidth="777.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <SplitPane dividerPositions="0.5034860557768925" layoutX="14.0" layoutY="14.0" orientation="VERTICAL" prefHeight="393.6" prefWidth="798.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <items>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                                     <children>
+                                                                        <GridPane layoutX="20.0" layoutY="14.0" prefHeight="185.6" prefWidth="778.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                                                                 <children>
+                                                                                    <Label text="Nombre" />
+                                                                                    <TextField id="nombreProfesor" fx:id="nombreProfesor" prefHeight="26.0" prefWidth="590.0" promptText="Ingrese el nombre del profesor" />
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets left="10.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="1">
+                                                                                 <children>
+                                                                                    <Label text="Años de antiguedad" />
+                                                                                    <TextField id="añosProfesor" fx:id="añosProfesor" prefHeight="26.0" prefWidth="527.0" promptText="Ingrese los años de antiguedad" />
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets left="10.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="2">
+                                                                                 <children>
+                                                                                    <Label text="Carrera dictada" />
+                                                                                    <ChoiceBox id="carreraProfesor" fx:id="carreraProfesor" prefHeight="26.0" prefWidth="207.0" />
+                                                                                    <Label text="Materia" />
+                                                                                    <ChoiceBox id="materiaProfesor" fx:id="materiaProfesor" prefHeight="26.0" prefWidth="241.0" />
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets left="10.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="3">
+                                                                                 <children>
+                                                                                    <Label text="Id" />
+                                                                                    <TextField id="idProfesor" fx:id="idProfesor" onAction="#idProfesor" prefHeight="26.0" prefWidth="626.0" promptText="Ingrese el id del profesor" />
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets left="10.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                           </children>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                                     <children>
+                                                                        <TableView layoutX="86.0" layoutY="-1.0" prefHeight="131.0" prefWidth="857.0" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                          <columns>
+                                                                            <TableColumn prefWidth="270.400042951107" text="Nombre" />
+                                                                            <TableColumn prefWidth="127.20001220703125" text="Años de antiguedad" />
+                                                                              <TableColumn prefWidth="178.40005493164062" text="Carrera dictada" />
+                                                                              <TableColumn prefWidth="175.199951171875" text="Materia" />
+                                                                              <TableColumn prefWidth="120.800048828125" text="Id" />
+                                                                          </columns>
+                                                                        </TableView>
+                                                                        <Button id="crearProfesor" layoutX="52.0" layoutY="143.0" mnemonicParsing="false" onAction="#crearProfesor" prefHeight="40.0" prefWidth="100.0" text="Crear" />
+                                                                        <Button id="eliminarProfesor" layoutX="692.0" layoutY="143.0" mnemonicParsing="false" onAction="#eliminarProfesor" prefHeight="40.0" prefWidth="100.0" text="Eliminar" />
+                                                                        <Button id="buscarProfesor" layoutX="464.0" layoutY="143.0" mnemonicParsing="false" onAction="#buscarProfesor" prefHeight="40.0" prefWidth="100.0" text="Buscar" />
+                                                                        <Button id="editarProfesor" layoutX="256.0" layoutY="143.0" mnemonicParsing="false" onAction="#editarProfesor" prefHeight="40.0" prefWidth="100.0" text="Editar" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </items>
+                                                            </SplitPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </TitledPane>
+                                        <TitledPane animated="false" text="Administrativo">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="322.4" prefWidth="777.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <SplitPane dividerPositions="0.4462151394422311" layoutX="14.0" layoutY="14.0" orientation="VERTICAL" prefHeight="393.6" prefWidth="798.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <items>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                                     <children>
+                                                                        <GridPane layoutX="20.0" layoutY="14.0" prefHeight="185.6" prefWidth="778.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                                                                 <children>
+                                                                                    <Label text="Nombre" />
+                                                                                    <TextField id="nombreAdmin" fx:id="nombreAdmin" prefHeight="26.0" prefWidth="595.0" promptText="Ingrese el nombre del administrativo" />
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets left="10.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="1">
+                                                                                 <children>
+                                                                                    <Label text="Años de antiguedad" />
+                                                                                    <TextField id="añosAdmin" fx:id="añosAdmin" prefHeight="26.0" prefWidth="532.0" promptText="Ingrese los años de antiguedad" />
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets left="10.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="2">
+                                                                                 <children>
+                                                                                    <Label text="Cargo" />
+                                                                                    <ChoiceBox id="cargoAdmin" fx:id="cargoAdmin" prefHeight="26.0" prefWidth="238.0" />
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets left="10.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="3">
+                                                                                 <children>
+                                                                                    <Label text="Id" />
+                                                                                    <TextField id="idAdmin" fx:id="idAdmin" prefHeight="26.0" prefWidth="602.0" promptText="Ingrese el Id" />
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets left="10.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                           </children>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                                     <children>
+                                                                        <TableView prefHeight="131.0" prefWidth="857.0">
+                                                                           <columns>
+                                                                              <TableColumn prefWidth="270.400042951107" text="Nombre" />
+                                                                              <TableColumn prefWidth="127.20001220703125" text="Años de antiguedad" />
+                                                                              <TableColumn prefWidth="178.40005493164062" text="Carrera dictada" />
+                                                                              <TableColumn prefWidth="175.199951171875" text="Materia" />
+                                                                              <TableColumn prefWidth="120.800048828125" text="Id" />
+                                                                           </columns>
+                                                                        </TableView>
+                                                                        <Button id="crearAdmin" layoutX="50.0" layoutY="155.0" mnemonicParsing="false" onAction="#crearAdmin" prefHeight="40.0" prefWidth="100.0" text="Crear" />
+                                                                        <Button id="eliminarAdmin" layoutX="706.0" layoutY="147.0" mnemonicParsing="false" onAction="#eliminarAdmin" prefHeight="48.0" prefWidth="115.0" style="-fx-background-color: #eb1515;" text="Eliminar">
+                                                                           <font>
+                                                                              <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                                                                           </font>
+                                                                        </Button>
+                                                                        <Button id="buscarAdmin" layoutX="498.0" layoutY="155.0" mnemonicParsing="false" onAction="#buscarAdmin" prefHeight="40.0" prefWidth="100.0" text="Buscar" />
+                                                                        <Button id="editarAdmin" layoutX="270.0" layoutY="155.0" mnemonicParsing="false" onAction="#editarAdmin" prefHeight="40.0" prefWidth="100.0" text="Editar" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </items>
+                                                            </SplitPane>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </TitledPane>
+                                      </panes>
+                                    </Accordion>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
